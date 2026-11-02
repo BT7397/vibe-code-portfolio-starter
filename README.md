@@ -60,12 +60,64 @@ code .
 
 > Prefer clicking? In VS Code: **Ctrl+Shift+P** (Mac: **Cmd+Shift+P**) → **Git: Clone** → paste the URL.
 
-## Step 3: Preview your site
+## Step 3: Open your website in the browser
+
+When you open the project in VS Code for the first time:
 
 1. VS Code asks **"Do you trust the authors of the files in this folder?"** Click **Yes, I trust the authors**. If you see a blue **Restricted Mode** bar at the top instead, click **Manage → Trust**. Copilot can't edit your files until you do this.
-2. VS Code will pop up *"This workspace has extension recommendations"*. Click **Install** (you get Live Server and Copilot)
-3. Right-click `index.html` → **Open with Live Server**
-4. Your site opens in the browser and **refreshes by itself** every time you save a file
+2. VS Code pops up *"This workspace has extension recommendations"*. Click **Install**. This installs **Live Server** (and Copilot, if you don't have it yet).
+
+### How does a website "run"?
+
+There is nothing to compile or install. Your website is just files: `index.html` is the page, and it loads `css/style.css` and `js/main.js`. **Your web browser reads these files and draws the page.** "Running" your site just means opening `index.html` in a browser.
+
+There are two ways to do it. **Use Option A (Live Server)** while you're working. Option B is a backup.
+
+### Option A: Live Server (recommended) ⭐
+
+Live Server opens your site and **refreshes the browser by itself every time you save a file**, so you see Copilot's changes straight away.
+
+1. In the **Explorer** on the left of VS Code, **right-click `index.html`** → click **Open with Live Server**
+   - Or click **Go Live** in the blue bar at the **bottom-right** of VS Code
+2. Your browser opens at an address like `http://127.0.0.1:5500/index.html`. That's your site, running on your own computer. Only you can see it.
+3. Make a change and **save it** (**Ctrl+S**, Mac: **Cmd+S**). The browser updates by itself.
+4. To stop Live Server, click the same button in the bottom-right of VS Code. While it's running, the button shows **Port : 5500** instead of **Go Live**.
+
+> Don't see **Open with Live Server** or **Go Live**? Live Server isn't installed. Click the **Extensions** icon on the left of VS Code (four squares), search for **Live Server** (by Ritwick Dey), click **Install**, then try again.
+
+### Option B: Open the file directly
+
+No extension needed. Open a terminal **in your project folder** (in VS Code: **Terminal → New Terminal**) and type:
+
+| Your computer | Command |
+|---|---|
+| Windows (Command Prompt, PowerShell or Git Bash) | `start index.html` |
+| Mac (Terminal) | `open index.html` |
+
+Your default browser opens the page. The address starts with `file:///`, which means it's reading the file straight from your computer.
+
+You can also just **double-click `index.html`** in File Explorer (Mac: Finder).
+
+⚠️ With Option B the browser **doesn't refresh by itself**. After you save a change, click the browser and press **F5** (Mac: **Cmd+R**) to see it.
+
+### Which one should I use?
+
+| | Option A: Live Server | Option B: `start index.html` |
+|---|---|---|
+| Setup | Install one extension | Nothing |
+| Shows your changes | By itself, on save | Only after you press F5 |
+| Address bar | `http://127.0.0.1:5500/...` | `file:///C:/...` |
+| Best for | Working on your site | A quick look |
+
+### Something wrong?
+
+| What you see | Fix |
+|---|---|
+| My change doesn't show up | Did you **save**? A white dot ● on the file's tab means it isn't saved. Press **Ctrl+S**. Tip: turn on **File → Auto Save**. |
+| The page is plain black text with no colours | The browser can't find `css/style.css`. Make sure you opened the `index.html` inside your project folder, and that you didn't move or rename the `css` folder. |
+| `npm error Missing script` after `npm start` or `npm run dev` | This project doesn't use npm (that's for other kinds of projects). Use Option A or Option B above. If Copilot created a `package.json`, you can delete it. |
+| `start` is not recognized / file not found | Your terminal isn't in the project folder. Run `cd your-repo-name` first, or use **Terminal → New Terminal** in VS Code. |
+| Live Server opens a list of files instead of my site | You opened the wrong folder. Use **File → Open Folder** and pick the folder that has `index.html` directly inside it. |
 
 ## Step 4: Vibe code it with Copilot ✨
 
