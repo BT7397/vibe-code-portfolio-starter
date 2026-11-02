@@ -15,6 +15,7 @@ No frameworks and no installs needed. It's just HTML, CSS and JavaScript.
 ├── js/main.js            ← Small interactive bits (dark mode, footer year)
 ├── assets/images/        ← Put your photo and project screenshots here
 ├── assets/resume/        ← Put your resume PDF here (optional)
+├── docs/setup-guide.pdf  ← Printable install guide with screenshots
 ├── .github/copilot-instructions.md ← Rules Copilot reads automatically. Don't delete!
 ├── render.yaml           ← Hosting settings for Render
 ├── PROMPTS.md            ← Prompt ideas for vibe coding
@@ -25,6 +26,8 @@ No frameworks and no installs needed. It's just HTML, CSS and JavaScript.
 ---
 
 ## ✅ Before the workshop
+
+> 📄 **New to all this?** Follow the printable **[Setup Guide with screenshots (PDF)](docs/setup-guide.pdf)**. It walks you through every install step below.
 
 1. **Make a GitHub account**: <https://github.com/signup>
 2. **Install Git**: <https://git-scm.com/downloads>
