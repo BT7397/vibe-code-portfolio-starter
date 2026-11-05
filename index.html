@@ -1,134 +1,178 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- TODO: Change the title and description to your own -->
-  <title>Your Name | Portfolio</title>
-  <meta name="description" content="Personal portfolio of Your Name — student, builder, problem solver." />
-
-  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#10151c" />
+  <meta name="description" content="Bryan Tan is a Year 2 Diploma student in Enterprise Cloud Computing Management, seeking an internship." />
+  <title>Bryan Tan — Cloud Computing Portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ============ NAVIGATION ============ -->
   <header class="site-header">
-    <nav class="nav container">
-      <a href="#" class="nav-logo">YN</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    <nav class="nav shell" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Bryan Tan, home">
+        <span class="brand-mark">BT</span>
+        <span class="brand-name">BRYAN TAN<span class="brand-dot">.</span></span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#about">Profile</a>
+        <a href="#skills">Capabilities</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.2A8.4 8.4 0 0 1 8.8 3.6 8.7 8.7 0 1 0 20.4 15.2Z"/></svg>
+        </button>
+      </div>
     </nav>
   </header>
 
-  <main>
-
-    <!-- ============ HERO ============ -->
-    <section class="hero container">
-      <p class="hero-greeting">Hi, I'm</p>
-      <!-- TODO: Put your name here -->
-      <h1 class="hero-name">Your Name</h1>
-      <!-- TODO: One line about who you are -->
-      <p class="hero-tagline">Student developer who likes building things on the web.</p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">See my work</a>
-        <a href="#contact" class="btn btn-outline">Get in touch</a>
+  <main id="main">
+    <section class="hero shell" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow"><span class="status-dot"></span> OPEN TO INTERNSHIP OPPORTUNITIES</p>
+        <h1 id="hero-title">Bryan<br /><span>Tan.</span></h1>
+        <p class="hero-role">Year 2 Diploma student<br />Enterprise Cloud Computing Management</p>
+        <p class="hero-intro">Curious about technology, motivated by practical projects, and ready to grow with a team.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
+          <a class="button button-quiet" href="mailto:bryantan1229@gmail.com">Let’s connect <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-meta" aria-label="Portfolio summary">
+          <div><strong>02</strong><span>Featured projects</span></div>
+          <div><strong>Y2</strong><span>Diploma student</span></div>
+          <div><strong>01</strong><span>Goal: internship</span></div>
+        </div>
       </div>
+
+      <div class="hero-art" aria-label="Abstract digital network illustration" role="img" data-reveal>
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-orbit orbit-three"></div>
+        <div class="art-core"><span>BT</span><i></i></div>
+        <span class="art-node node-a"></span><span class="art-node node-b"></span><span class="art-node node-c"></span>
+        <div class="art-label label-top"><span>01 / PROFILE</span><b>Building forward</b></div>
+        <div class="art-label label-bottom"><span>FOCUS AREAS</span><b>Data · Code · Systems</b></div>
+        <div class="art-coordinate">01° 02′ / CLOUD SYSTEMS</div>
+      </div>
+
+      <a class="scroll-cue" href="#about"><span></span> SCROLL TO EXPLORE</a>
     </section>
 
-    <!-- ============ ABOUT ============ -->
-    <section id="about" class="section container">
-      <h2 class="section-title">About Me</h2>
+    <section class="section shell" id="about" aria-labelledby="about-title">
+      <div class="section-heading" data-reveal>
+        <p class="section-index">01 / PROFILE</p>
+        <h2 id="about-title">A student with a<br /><span>builder’s mindset.</span></h2>
+      </div>
       <div class="about-grid">
-        <!-- TODO: Replace with your own photo in assets/images/ -->
-        <img src="assets/images/profile-placeholder.svg" alt="Photo of Your Name" class="about-photo" />
-        <div>
-          <!-- TODO: Write 2–3 short paragraphs about yourself -->
-          <p>
-            I'm a student at <strong>Your School</strong> studying <strong>Your Course</strong>.
-            Write a few sentences here about what you're into, what you're learning,
-            and what kind of work you want to do.
-          </p>
-          <p>
-            Outside of class, I enjoy <em>hobby one</em>, <em>hobby two</em>, and <em>hobby three</em>.
-          </p>
+        <p class="about-lead" data-reveal>I’m Bryan Tan, a Year 2 Diploma student in Enterprise Cloud Computing Management. I’m looking for an internship where I can learn from a team, contribute to meaningful work, and keep building my skills.</p>
+        <div class="about-detail" data-reveal>
+          <p>My projects explore how digital tools can serve a community—from a campus marketplace for student makers to a web app concept for incident reporting.</p>
+          <div class="interests"><span class="micro-label">OUTSIDE THE CLASSROOM</span><p>Music <i>·</i> Driving <i>·</i> Sunset watching</p></div>
         </div>
       </div>
     </section>
 
-    <!-- ============ SKILLS ============ -->
-    <section id="skills" class="section container">
-      <h2 class="section-title">Skills</h2>
-      <!-- TODO: List your real skills -->
-      <ul class="skills-list">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>Git &amp; GitHub</li>
-        <li>Teamwork</li>
-      </ul>
-    </section>
-
-    <!-- ============ PROJECTS ============ -->
-    <section id="projects" class="section container">
-      <h2 class="section-title">Projects</h2>
-      <div class="projects-grid">
-
-        <!-- TODO: Copy this card for each project you want to show -->
-        <article class="project-card">
-          <h3>Project One</h3>
-          <p>A short description of what this project does and what you learned building it.</p>
-          <ul class="project-tags">
-            <li>HTML</li><li>CSS</li>
-          </ul>
-          <a href="#" class="project-link">View project →</a>
-        </article>
-
-        <article class="project-card">
-          <h3>Project Two</h3>
-          <p>A short description of what this project does and what you learned building it.</p>
-          <ul class="project-tags">
-            <li>Python</li>
-          </ul>
-          <a href="#" class="project-link">View project →</a>
-        </article>
-
-        <article class="project-card">
-          <h3>Project Three</h3>
-          <p>A short description of what this project does and what you learned building it.</p>
-          <ul class="project-tags">
-            <li>JavaScript</li>
-          </ul>
-          <a href="#" class="project-link">View project →</a>
-        </article>
-
+    <section class="section section-panel" id="skills" aria-labelledby="skills-title">
+      <div class="shell">
+        <div class="section-heading section-heading-row" data-reveal>
+          <div><p class="section-index">02 / CAPABILITIES</p><h2 id="skills-title">What I bring<br /><span>to the table.</span></h2></div>
+          <p class="heading-note">A growing toolkit across data, programming, and working with people.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card" data-reveal>
+            <span class="skill-number">01</span>
+            <div class="skill-icon" aria-hidden="true">⌘</div>
+            <h3>Database administration</h3>
+            <p>Working with relational data and MySQL.</p>
+            <ul class="tag-list"><li>MySQL</li><li>Databases</li></ul>
+          </article>
+          <article class="skill-card" data-reveal>
+            <span class="skill-number">02</span>
+            <div class="skill-icon" aria-hidden="true">&lt;/&gt;</div>
+            <h3>Programming</h3>
+            <p>Building a foundation in scripting and web development.</p>
+            <ul class="tag-list"><li>Python</li><li>JavaScript</li></ul>
+          </article>
+          <article class="skill-card" data-reveal>
+            <span class="skill-number">03</span>
+            <div class="skill-icon" aria-hidden="true">◎</div>
+            <h3>Team practice</h3>
+            <p>Collaborating with others and working with standards in mind.</p>
+            <ul class="tag-list"><li>Collaboration</li><li>Standards compliance</li></ul>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- ============ CONTACT ============ -->
-    <section id="contact" class="section container">
-      <h2 class="section-title">Contact</h2>
-      <p>Want to work together or just say hi? Find me here:</p>
-      <!-- TODO: Put in your real links (delete any you don't use) -->
-      <ul class="contact-links">
-        <li><a href="mailto:you@example.com">Email</a></li>
-        <li><a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener">LinkedIn</a></li>
-      </ul>
+    <section class="section shell" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading section-heading-row" data-reveal>
+        <div><p class="section-index">03 / SELECTED WORK</p><h2 id="projects-title">Ideas made<br /><span>tangible.</span></h2></div>
+        <p class="heading-note">Two projects focused on practical needs in the community.</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card project-market" data-reveal>
+          <div class="project-visual market-visual" aria-hidden="true">
+            <span class="visual-kicker">CAMPUS / COMMUNITY</span>
+            <div class="market-window"><div class="window-top"><i></i><i></i><i></i><span>RP MARKET</span></div><div class="market-content"><div class="market-tile tile-large"><b>HANDMADE</b><span>MADE ON CAMPUS</span></div><div class="market-stack"><i></i><i></i><i></i></div></div></div>
+            <span class="visual-index">01</span>
+          </div>
+          <div class="project-body">
+            <p class="project-type">CAMPUS MARKETPLACE</p>
+            <h3>RP Market</h3>
+            <p>A website for students to promote their handmade products within the campus community.</p>
+            <span class="project-foot">STUDENT-LED COMMERCE</span>
+          </div>
+        </article>
+        <article class="project-card project-crisis" data-reveal>
+          <div class="project-visual crisis-visual" aria-hidden="true">
+            <span class="visual-kicker">COMMUNITY / RESPONSE</span>
+            <div class="signal-rings"><i></i><i></i><i></i><span>!</span></div>
+            <div class="signal-line line-one"></div><div class="signal-line line-two"></div>
+            <span class="visual-index">02</span>
+            <span class="crisis-caption">INCIDENT REPORTING CONCEPT</span>
+          </div>
+          <div class="project-body">
+            <p class="project-type">INCIDENT REPORTING</p>
+            <h3>Crisis Hub</h3>
+            <p>A web app concept for incident reporting, inspired by SGSecure.</p>
+            <span class="project-foot">COMMUNITY SAFETY</span>
+          </div>
+        </article>
+      </div>
+      <p class="project-note" data-reveal>Project links and implementation details can be added as they’re ready.</p>
     </section>
 
+    <section class="contact-band" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-inner" data-reveal>
+        <div>
+          <p class="section-index">04 / NEXT STEP</p>
+          <h2 id="contact-title">Let’s build<br /><span>what’s next.</span></h2>
+          <p class="contact-copy">I’m looking for an internship opportunity where I can learn, contribute, and grow. I’d be glad to connect.</p>
+        </div>
+        <div class="contact-panel">
+          <a class="contact-row" href="mailto:bryantan1229@gmail.com"><span><small>EMAIL</small><b>bryantan1229@gmail.com</b></span><i aria-hidden="true">↗</i></a>
+          <a class="contact-row" href="tel:81823767"><span><small>MOBILE</small><b>8182 3767</b></span><i aria-hidden="true">↗</i></a>
+          <a class="contact-row" href="https://github.com/BT7397" target="_blank" rel="noopener noreferrer"><span><small>GITHUB</small><b>github.com/BT7397</b></span><i aria-hidden="true">↗</i></a>
+          <a class="contact-row" href="https://www.linkedin.com/in/bryan-tan-1350b0366/" target="_blank" rel="noopener noreferrer"><span><small>LINKEDIN</small><b>Bryan Tan</b></span><i aria-hidden="true">↗</i></a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- ============ FOOTER ============ -->
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Your Name. Built during the Vibe Code Your Portfolio workshop.</p>
+  <footer class="site-footer shell">
+    <a class="footer-brand" href="#top">BT<span>.</span></a>
+    <p>Designed with intent. Built by Bryan Tan.</p>
+    <a class="back-top" href="#top">BACK TO TOP <span aria-hidden="true">↑</span></a>
+    <small class="copyright">© <span id="year"></span> BRYAN TAN</small>
   </footer>
 
   <script src="js/main.js"></script>
